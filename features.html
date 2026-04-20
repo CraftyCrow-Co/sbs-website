@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StepByStep — Features</title>
+  <meta name="description" content="Six step types, full routing logic, REST API, webhooks, MCP server, and an Ops Score that tracks your operational health automatically.">
+  <link rel="preconnect" href="https://api.fontshare.com">
+  <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,600,700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+<!-- ============================================================
+     NAV
+     ============================================================ -->
+<nav class="nav scrolled" aria-label="Main navigation">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">StepByStep</a>
+    <div class="nav-links">
+      <a href="index.html#how-it-works">How it works</a>
+      <a href="#pricing">Pricing</a>
+      <a href="features.html" class="active">Features</a>
+    </div>
+    <div class="nav-right">
+      <a href="#" class="nav-signin">Sign in</a>
+      <a href="#" class="btn btn-primary btn-sm">Try free</a>
+      <button class="nav-hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<div class="nav-mobile" role="dialog">
+  <a href="index.html#how-it-works">How it works</a>
+  <a href="#pricing">Pricing</a>
+  <a href="features.html">Features</a>
+  <a href="#">Sign in</a>
+  <a href="#" class="btn btn-primary" style="margin-top:8px;">Try free</a>
+</div>
+
+<!-- Sub-nav -->
+<div class="sub-nav">
+  <div class="sub-nav-inner">
+    <a href="#step-types">Step types</a>
+    <a href="#routing">Routing</a>
+    <a href="#integrations">Integrations</a>
+    <a href="#doer-experience">Doer experience</a>
+    <a href="#ops-score">Ops Score</a>
+    <a href="#pricing">Pricing</a>
+  </div>
+</div>
+
+
+<!-- ============================================================
+     HERO
+     ============================================================ -->
+<section class="features-hero">
+  <div class="container">
+    <div class="features-hero-eyebrow">Features</div>
+    <h1 class="features-hero-headline">Everything<br>StepByStep can do.</h1>
+    <p class="features-hero-sub">The landing page gave you the idea. This page gives you the details.</p>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     STEP TYPES
+     ============================================================ -->
+<section class="bg-white section-pad" id="step-types">
+  <div class="container">
+    <div class="section-label">Step types</div>
+    <h2 class="section-headline">Six types of steps.<br>Everything your process needs.</h2>
+    <p class="section-body" style="margin-bottom:var(--s6);">
+      Most business processes are combinations of decisions, checklists, forms, calculations,
+      documents, and AI-generated content. StepByStep handles all six — in any order, in any combination.
+    </p>
+
+    <div class="step-types-grid">
+
+      <div class="step-type-card">
+        <div class="step-type-kicker">Status</div>
+        <div class="step-type-name">Status step</div>
+        <p class="step-type-desc">Someone picks an outcome from your list. Each option routes the process differently.</p>
+        <div class="step-type-example">
+          Example: "Approve", "Reject", "Send back for changes" — each goes to a different next step.
+        </div>
+      </div>
+
+      <div class="step-type-card">
+        <div class="step-type-kicker">Checklist</div>
+        <div class="step-type-name">Checklist step</div>
+        <p class="step-type-desc">Someone checks off a list of items. When they're done, the process moves on.</p>
+        <div class="step-type-example">
+          Example: Pre-flight inspection, onboarding paperwork checklist, opening and closing procedures.
+        </div>
+      </div>
+
+      <div class="step-type-card">
+        <div class="step-type-kicker">Form</div>
+        <div class="step-type-name">Form step</div>
+        <p class="step-type-desc">Someone fills out a structured form. Each answer can route the process differently.</p>
+        <div class="step-type-example">
+          Example: A customer intake form where "urgent" routes to priority handling and "standard" routes to the normal queue.
+        </div>
+      </div>
+
+      <div class="step-type-card">
+        <div class="step-type-kicker">Calculator</div>
+        <div class="step-type-name">Calculator step</div>
+        <p class="step-type-desc">Computes an output from process data. No input needed from the doer — it just runs.</p>
+        <div class="step-type-example">
+          Example: Total invoice amount from line items, SLA deadline based on submission date, discount calculation.
+        </div>
+      </div>
+
+      <div class="step-type-card">
+        <div class="step-type-kicker">Document</div>
+        <div class="step-type-name">Document step</div>
+        <p class="step-type-desc">Generates a PDF or document, filled with data from the process run.</p>
+        <div class="step-type-example">
+          Example: Auto-populated offer letter, invoice, inspection report, compliance certificate.
+        </div>
+      </div>
+
+      <div class="step-type-card">
+        <div class="step-type-kicker">AI</div>
+        <div class="step-type-name">AI step</div>
+        <p class="step-type-desc">Lets an LLM fill a step, using your process data as context.</p>
+        <div class="step-type-example">
+          Example: Draft a response email to a customer complaint using the complaint details and your company tone guidelines.
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     ROUTING
+     ============================================================ -->
+<section class="bg-warm section-pad" id="routing">
+  <div class="container">
+    <div class="section-label">Routing</div>
+    <h2 class="section-headline">Every outcome goes somewhere.<br>You decide where.</h2>
+
+    <p class="section-body" style="margin-bottom:0;">
+      You define what happens when a step completes. Not just "go to the next step" — any outcome
+      can route to any step, in any direction.
+    </p>
+
+    <div class="routing-diagram">Step 1: Review application
+   &#9500;&#9472;&#9472; "Approve"    &#8594;  <span class="hl">Step 4: Send offer</span>
+   &#9500;&#9472;&#9472; "Reject"     &#8594;  <span class="hl">Step 2: Send rejection email</span>
+   &#9492;&#9472;&#9472; "More info"  &#8594;  <span class="hl">Step 3: Request documents &#8594; loops back to Step 1</span></div>
+
+    <h3 style="font-size:var(--text-base); font-weight:700; letter-spacing:-0.01em; margin-bottom:var(--s4);">Forward, backward, parallel — all of it.</h3>
+
+    <div class="routing-bullets">
+      <div class="routing-bullet">
+        <div class="routing-bullet-dot"></div>
+        <span><strong>Route forward</strong> to skip steps when conditions are met</span>
+      </div>
+      <div class="routing-bullet">
+        <div class="routing-bullet-dot"></div>
+        <span><strong>Route backward</strong> to request corrections or create approval loops</span>
+      </div>
+      <div class="routing-bullet">
+        <div class="routing-bullet-dot"></div>
+        <span><strong>Run steps in parallel</strong> when multiple things must happen simultaneously</span>
+      </div>
+      <div class="routing-bullet">
+        <div class="routing-bullet-dot"></div>
+        <span><strong>Trigger a different process</strong> from a step outcome &mdash; handoffs, sub-processes, escalations</span>
+      </div>
+    </div>
+
+    <p style="font-size:var(--text-sm); color:var(--text-muted); margin-top:var(--s5);">You write it in plain English. The system draws the map.</p>
+
+    <div class="routing-note-box">
+      <strong>Data flows automatically.</strong> What gets collected at each step is available to every step that follows.
+      No manual passing of data. If a form in Step 2 asked for the customer's company size, any later step can reference that answer.
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     INTEGRATIONS
+     ============================================================ -->
+<section class="bg-white section-pad" id="integrations">
+  <div class="container">
+    <div class="section-label">Integrations</div>
+    <h2 class="section-headline">Connects to everything.<br>Runs anywhere.</h2>
+    <p class="section-body" style="margin-bottom:var(--s6);">
+      StepByStep is built API-first. Whatever your stack looks like, you can integrate in a day.
+    </p>
+
+    <div class="integration-grid">
+
+      <div class="integration-card">
+        <div class="integration-name">REST API</div>
+        <p class="integration-desc">
+          Full programmatic access. Trigger process runs, complete steps on behalf of users,
+          read run data, manage process definitions. Everything the UI can do, the API can do.
+        </p>
+        <div class="code-block">
+          <span class="code-comment"># Trigger a new run</span><br>
+          <span class="code-keyword">POST</span> /v1/processes/{id}/runs<br>
+          <br>
+          <span class="code-comment"># Complete a step</span><br>
+          <span class="code-keyword">POST</span> /v1/runs/{id}/steps/{step_id}/complete
+        </div>
+        <a href="#" class="integration-link">View API docs &#8594;</a>
+      </div>
+
+      <div class="integration-card">
+        <div class="integration-name">Webhooks</div>
+        <p class="integration-desc">
+          StepByStep pushes events to wherever your team works. Step completed, run started,
+          step overdue, process finished &mdash; all of it can go to Slack, your CRM, your ERP,
+          or your data warehouse. You set the endpoint. We deliver signed payloads.
+        </p>
+        <div class="code-block">
+          <span class="code-comment"># Events delivered to your endpoint:</span><br>
+          step.completed &nbsp; run.started<br>
+          step.overdue &nbsp;&nbsp; run.finished
+        </div>
+        <a href="#" class="integration-link">Webhook event reference &#8594;</a>
+      </div>
+
+      <div class="integration-card">
+        <div class="integration-name">MCP Server</div>
+        <p class="integration-desc">
+          Let AI agents run processes directly. Any LLM tool that supports MCP &mdash; Claude,
+          Cursor, and others &mdash; can trigger runs, complete steps, and read results using
+          the same model your human team uses.
+        </p>
+        <div class="code-block">
+          npx @stepbystep/mcp
+        </div>
+        <p style="font-size:var(--text-xs); color:var(--text-muted); margin-bottom:var(--s4);">Installed in one line. No configuration needed.</p>
+        <a href="#" class="integration-link">MCP setup guide &#8594;</a>
+      </div>
+
+    </div>
+
+    <p style="text-align:center; font-size:var(--text-sm); color:var(--text-muted); margin-top:var(--s5); font-style:italic;">
+      Developers can integrate StepByStep in a day.
+    </p>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     DOER EXPERIENCE
+     ============================================================ -->
+<section class="bg-warm section-pad" id="doer-experience">
+  <div class="container">
+    <div class="section-label">Doer experience</div>
+    <h2 class="section-headline">Your team sees only<br>what they need to do.</h2>
+
+    <div class="doer-layout" style="margin-top:var(--s5);">
+
+      <div class="doer-copy">
+        <p>When someone is assigned a step, they get a notification. They open it. They see one thing: what they need to do right now.</p>
+        <p><strong>No dashboard to navigate.</strong> No process map to decode. No training required.</p>
+        <p>Just: here's the step. Here's the information you need. Here are your options. Works on any device &mdash; phone, tablet, laptop.</p>
+        <p>This is how adoption actually happens: not because you told people to use a new tool, but because the tool gets completely out of the way.</p>
+      </div>
+
+      <div style="display:flex; justify-content:center; flex-shrink:0;">
+        <div class="phone-frame" style="width:248px;">
+          <div class="phone-screen" style="min-height:500px;">
+            <div class="phone-status-bar">
+              <span class="phone-time">9:41</span>
+              <div class="phone-signal"><span></span><span></span><span></span></div>
+            </div>
+            <div class="doer-step-screen">
+              <div style="background:var(--accent); padding:9px 16px; display:flex; align-items:center; justify-content:space-between;">
+                <span style="font-size:11px; font-weight:600; color:rgba(255,255,255,0.85);">1 step needs your action</span>
+                <span style="width:7px; height:7px; background:white; border-radius:50%;"></span>
+              </div>
+              <div class="doer-step-header">
+                <div class="doer-process-label">Quality Check</div>
+                <div class="doer-step-title">Inspect batch &mdash; Batch #22</div>
+                <div class="doer-assigned">Due in 2 hours</div>
+              </div>
+              <div class="doer-context">
+                <div class="context-row">
+                  <span class="context-label">Batch #</span>
+                  <span class="context-value">22 / Nov 2024</span>
+                </div>
+                <div class="context-row">
+                  <span class="context-label">Product</span>
+                  <span class="context-value">Unit B-Type</span>
+                </div>
+                <div class="context-row">
+                  <span class="context-label">Quantity</span>
+                  <span class="context-value">250 units</span>
+                </div>
+              </div>
+              <div style="padding:0 16px 8px; font-size:11px; color:var(--text-muted);">Select outcome:</div>
+              <div class="doer-actions" style="flex-direction:column; gap:6px;">
+                <button class="doer-btn doer-btn-primary" style="flex:none;">Pass &mdash; move to packaging</button>
+                <button class="doer-btn doer-btn-ghost" style="flex:none;">Fail &mdash; flag for review</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     OPS SCORE
+     ============================================================ -->
+<section class="bg-white section-pad" id="ops-score">
+  <div class="container">
+    <div class="section-label">Ops Score</div>
+    <h2 class="section-headline">A number that shows your operations<br>are actually improving.</h2>
+    <p class="section-body" style="margin-bottom:var(--s6);">
+      Every account gets an Ops Score &mdash; a single number that tracks how well your processes
+      are running. It updates automatically. You don't pull reports to see it.
+      Every signal is observed automatically from how work moves through the system.
+    </p>
+
+    <div style="display:flex; justify-content:center; margin-bottom:var(--s6);">
+      <div class="ops-widget" style="max-width:420px;">
+        <div class="ops-widget-header">
+          <div>
+            <div class="ops-label">Ops Score</div>
+            <div class="ops-score-num">782</div>
+          </div>
+          <div class="ops-delta">+94 this month</div>
+        </div>
+        <div class="ops-metrics">
+          <div class="ops-metric">
+            <span class="ops-metric-name">On-time completion</span>
+            <div class="ops-metric-right">
+              <span class="ops-metric-value">84%</span>
+              <span class="ops-trend up">&#8593;</span>
+            </div>
+          </div>
+          <div class="ops-metric">
+            <span class="ops-metric-name">Avg response time</span>
+            <div class="ops-metric-right">
+              <span class="ops-metric-value">2.1 hrs</span>
+              <span class="ops-trend down">&#8595;</span>
+            </div>
+          </div>
+          <div class="ops-metric">
+            <span class="ops-metric-name">Flow completion</span>
+            <div class="ops-metric-right">
+              <span class="ops-metric-value">91%</span>
+              <span class="ops-trend up">&#8593;</span>
+            </div>
+          </div>
+          <div class="ops-metric">
+            <span class="ops-metric-name">First-time-right</span>
+            <div class="ops-metric-right">
+              <span class="ops-metric-value">73%</span>
+              <span class="ops-trend up">&#8593;</span>
+            </div>
+          </div>
+          <div class="ops-metric">
+            <span class="ops-metric-name">Active doers</span>
+            <div class="ops-metric-right">
+              <span class="ops-metric-value">12 / 15</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ops-metric-grid">
+      <div class="ops-metric-card">
+        <div class="ops-metric-card-name">On-time completion</div>
+        <div class="ops-metric-card-desc">What % of steps are done within the time you set. Your team's track record.</div>
+      </div>
+      <div class="ops-metric-card">
+        <div class="ops-metric-card-name">Avg response time</div>
+        <div class="ops-metric-card-desc">How long it takes a doer to open a step once it's assigned. Where delays actually start.</div>
+      </div>
+      <div class="ops-metric-card">
+        <div class="ops-metric-card-name">Flow completion</div>
+        <div class="ops-metric-card-desc">What % of runs make it from start to finish without getting stuck. Your process health.</div>
+      </div>
+      <div class="ops-metric-card">
+        <div class="ops-metric-card-name">First-time-right</div>
+        <div class="ops-metric-card-desc">What % of steps complete without looping back for corrections. Fewer loops = fewer problems.</div>
+      </div>
+      <div class="ops-metric-card">
+        <div class="ops-metric-card-name">Active doers</div>
+        <div class="ops-metric-card-desc">How many of your assigned people are actually working in the system right now.</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ============================================================
+     PRICING
+     ============================================================ -->
+<section class="bg-warm section-pad" id="pricing">
+  <div class="container">
+    <div class="section-label">Pricing</div>
+    <h2 class="section-headline">Doers are always free.<br>Givers pick how they pay.</h2>
+    <p class="section-body" style="margin-bottom:var(--s6);">
+      The person who builds and manages processes pays. Everyone executing steps &mdash;
+      your warehouse team, delivery agents, front-desk staff &mdash; uses StepByStep free
+      forever. No seats. No per-user billing.
+    </p>
+
+    <div class="pricing-doers-badge">
+      <div class="pricing-doers-badge-inner">
+        <span class="pricing-dot"></span>
+        Everyone doing the work is free. Forever. On every plan.
+      </div>
+    </div>
+
+    <div class="pricing-grid" style="margin-bottom:var(--s6);">
+
+      <!-- Free -->
+      <div class="pricing-col">
+        <div class="pricing-tier-name">Free</div>
+        <div class="pricing-amount">
+          <span class="pricing-amount-main">&#8377;0</span>
+          <span class="pricing-amount-suffix">/ month</span>
+        </div>
+        <p class="pricing-sub">No credit card. No time limit. Full features to get started.</p>
+        <div class="pricing-features">
+          <div class="pricing-feature">
+            <span class="pricing-feature-check">&#10003;</span>
+            Up to 3 processes
+          </div>
+          <div class="pricing-feature">
+            <span class="pricing-feature-check">&#10003;</span>
+            50 runs per month
+          </div>
+          <div class="pricing-feature">
+            <span class="pricing-feature-check">&#10003;</span>
+            Unlimited doers
+          </div>
+          <div class="pricing-feature">
+            <span class="pricing-feature-check">&#10003;</span>
+            All 6 step types
+          </div>
+          <div class="pricing-feature">
+            <span class="pricing-feature-check">&#10003;</span>
+            Basic Ops Score
+          </div>
+        </div>
+        <a href="#" class="btn btn-secondary" style="width:100%; justify-content:center; margin-top:auto;">Start free</a>
+      </div>
+
+      <!-- Flat -->
+      <div class="pricing-col featured">
+        <div class="pricing-recommended">Most popular</div>
+        <div class="pricing-tier-name">Flat</div>
+        <div class="pricing-amount">
+          <span class="pricing-amount-main">&#8377;999</span>
+          <span class="pricing-amount-suffix">/ month</span>
+        </div>
+        <p class="pricing-sub">One price. Everything included. Scales with your team for free.</p>
+        <div class="pricing-features">
+          <div class="pricing-feature">
+            <span class="pricing-feature-check">&#10003;</span>
+            Unlimited processes
+          </div>
+          <div class="pricing-feature">
+            <span class="pricing-feature-check">&#10003;</span>
+            Unlimited runs
+          </div>
+          <div class="pricing-feature">
+            <span class="pricing-feature-check">&#10003;</span>
+            Unlimited doers
+          </div>
+          <div class="pricing-feature">
+            <span class="pricing-feature-check">&#10003;</span>
+            Full Ops Score dashboard
+          </div>
+          <div class="pricing-feature">
+            <span class="pricing-feature-check">&#10003;</span>
+            REST API &amp; webhooks
+          </div>
+          <div class="pricing-feature">
+            <span class="pricing-feature-check">&#10003;</span>
+            MCP server
+          </div>
+        </div>
+        <a href="#" class="btn btn-primary" style="width:100%; justify-content:center; margin-top:auto;">Get started</a>
+      </div>
+
+      <!-- Need-based -->
+      <div class="pricing-col nb-card">
+        <div class="pricing-tier-name">Need-based</div>
+        <div class="pricing-amount">
+          <span class="pricing-amount-main">&#8377;499<small style="font-size:var(--text-base); font-weight:500; letter-spacing:0;">+</small></span>
+          <span class="pricing-amount-suffix">/ month</span>
+        </div>
+        <p class="pricing-sub">Pay only for what you use. Pick the model that matches how your business runs.</p>
+
+        <table class="pricing-table">
+          <tbody>
+            <tr>
+              <td>Per designer</td>
+              <td>Few designers, large teams</td>
+            </tr>
+            <tr>
+              <td>Per active process</td>
+              <td>Many processes, varying volume</td>
+            </tr>
+            <tr>
+              <td>Per run</td>
+              <td>High volume, fewer processes</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <button class="nb-toggle-btn" aria-expanded="false">
+          <span class="nb-toggle-label">Calculate your cost</span>
+          <span class="nb-chevron">&#8964;</span>
+        </button>
+
+        <div class="nb-calc-wrapper">
+          <div class="pricing-calc">
+            <p class="calc-intro">Enter your numbers — we'll show you the cheapest model.</p>
+
+            <div class="calc-inputs">
+              <div class="calc-row">
+                <span class="calc-row-label">Process designers</span>
+                <div class="calc-counter">
+                  <button class="calc-step-btn" data-dec="designers">&#8722;</button>
+                  <span class="calc-val" data-val="designers">2</span>
+                  <button class="calc-step-btn" data-inc="designers">+</button>
+                </div>
+              </div>
+              <div class="calc-row">
+                <span class="calc-row-label">Active processes</span>
+                <div class="calc-counter">
+                  <button class="calc-step-btn" data-dec="processes">&#8722;</button>
+                  <span class="calc-val" data-val="processes">5</span>
+                  <button class="calc-step-btn" data-inc="processes">+</button>
+                </div>
+              </div>
+              <div class="calc-row">
+                <span class="calc-row-label">Runs per month</span>
+                <div class="calc-counter">
+                  <button class="calc-step-btn" data-dec="runs">&#8722;</button>
+                  <span class="calc-val" data-val="runs">300</span>
+                  <button class="calc-step-btn" data-inc="runs">+</button>
+                </div>
+              </div>
+            </div>
+
+            <hr class="calc-divider">
+
+            <div class="calc-free-banner">
+              The free tier covers this. You don't need to pay yet.
+            </div>
+
+            <div class="calc-results">
+              <div class="calc-result-row">
+                <span class="calc-result-name">Per designer <span class="calc-star" style="display:none;">&#9733;</span></span>
+                <span class="calc-result-price">&#8212;</span>
+              </div>
+              <div class="calc-result-row">
+                <span class="calc-result-name">Per active process <span class="calc-star" style="display:none;">&#9733;</span></span>
+                <span class="calc-result-price">&#8212;</span>
+              </div>
+              <div class="calc-result-row">
+                <span class="calc-result-name">Per run <span class="calc-star" style="display:none;">&#9733;</span></span>
+                <span class="calc-result-price">&#8212;</span>
+              </div>
+            </div>
+
+            <div class="calc-summary"></div>
+          </div>
+        </div>
+
+        <a href="#" class="btn btn-secondary" style="width:100%; justify-content:center; margin-top:var(--s5);">Talk to us</a>
+      </div>
+
+    </div>
+
+    <p class="pricing-footer-note">Switch models anytime. Prices update monthly. No contracts.</p>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     FINAL CTA
+     ============================================================ -->
+<section class="final-cta-section" id="cta">
+  <div class="container" style="max-width:640px;">
+    <h2 class="final-cta-headline">See it for yourself.</h2>
+    <p class="final-cta-sub">
+      The best way to understand what StepByStep can do is to build one process.
+      Pick something your business does every week. Build it in 15 minutes. Run it with your team.
+    </p>
+    <div class="cta-group" style="justify-content:center;">
+      <a href="#" class="btn btn-primary">Try free &mdash; no credit card needed</a>
+      <a href="#" class="btn btn-outline-dark">Book a walkthrough</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">StepByStep</div>
+      <div class="footer-tagline">The easy operating system for your business.</div>
+    </div>
+    <div class="footer-links">
+      <a href="#">Privacy</a>
+      <a href="#">Terms</a>
+      <a href="#">Contact</a>
+    </div>
+    <div class="footer-copy">&copy; 2026 StepByStep</div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
